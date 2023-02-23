@@ -1,0 +1,14 @@
+-r requirements.txt
+
+# code quality
+autopep8~=1.6
+black~=22.10
+coverage[toml]~=6.5
+pip-audit~=2.4
+pycodestyle~=2.9
+pylint~=2.14
+xq~=0.0
+
+# uploading to pypi
+build~=0.8
+twine~=4.0

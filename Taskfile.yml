@@ -1,0 +1,81 @@
+version: '3'
+
+tasks:
+
+  audit:
+    desc: Audit the code
+    cmds:
+      - ./scripts/builder.sh pip-audit -r requirements.txt
+
+  builder:
+    desc: Build a docker environment with the right dependencies and utilities
+    cmds:
+      - ./scripts/build.sh "3.7"
+
+  builder-3.8:
+    desc: Build a docker environment with the right dependencies and utilities
+    cmds:
+      - ./scripts/build.sh "3.8"
+
+  builder-3.9:
+    desc: Build a docker environment with the right dependencies and utilities
+    cmds:
+      - ./scripts/build.sh "3.9"
+
+  builder-3.10:
+    desc: Build a docker environment with the right dependencies and utilities
+    cmds:
+      - ./scripts/build.sh "3.10"
+
+  builder-3.11:
+    desc: Build a docker environment with the right dependencies and utilities
+    cmds:
+      - ./scripts/build.sh "3.11"
+
+  check:
+    desc: Check the style, bug and quality of the code
+    cmds:
+      - ./scripts/builder.sh python3 --version
+      - ./scripts/builder.sh pycodestyle --format=pylint rkvst_receipt_scitt unittests
+      - ./scripts/builder.sh python3 -m pylint rkvst_receipt_scitt unittests
+
+  clean:
+    desc: Clean git repo
+    cmds:
+      - find -name '*,cover' -type f -delete
+      - git clean -fdX
+
+  format:
+    desc: Format code using black
+    cmds:
+      - ./scripts/builder.sh black rkvst_receipt_scitt unittests
+
+  functest:
+    desc: Functionality testing - requires venv
+    cmds:
+      - ./scripts/functest.sh
+
+  publish:
+    desc: publish wheel package (will require username and password)
+    cmds:
+      - ./scripts/builder.sh python3 -m twine upload --repository pypi dist/*
+
+  sbom:
+    desc: Audit the code
+    cmds:
+      - ./scripts/builder.sh ./scripts/sbom.sh
+
+  unittests:
+    desc: Run unittests
+    cmds:
+      - ./scripts/builder.sh ./scripts/unittests.sh
+
+  venv:
+    desc: Builds python environment - requires wheel
+    cmds:
+      - ./scripts/venv.sh
+
+  wheel:
+    desc: Builds python wheel package
+    cmds:
+      - ./scripts/builder.sh ./scripts/wheel.sh
