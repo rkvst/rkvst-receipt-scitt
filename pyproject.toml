@@ -9,7 +9,7 @@ fail_under = 100
 enabled = true
 
 [tool.pyright]
-include = ["rkvst_simplehash"]
+include = ["rkvst_receipt_scitt"]
 
 [tool.pylint.main]
 # Analyse import fallback blocks. This can be used to support both Python 2 and 3
