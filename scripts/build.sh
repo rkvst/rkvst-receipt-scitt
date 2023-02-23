@@ -16,4 +16,4 @@ docker build \
     --no-cache \
     --build-arg VERSION="$1" \
     -f Dockerfile-builder \
-    -t rkvst-simplehash-python-builder .
+    -t rkvst-receipt-scitt-builder .
