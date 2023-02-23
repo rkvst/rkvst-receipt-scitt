@@ -1,0 +1,297 @@
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:1b81ef52-a49c-4c99-95e5-20f480f68402" version="1">
+  <metadata>
+    <timestamp>2023-02-23T14:49:18.152643+00:00</timestamp>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>cyclonedx-python-lib</name>
+        <version>3.1.5</version>
+        <externalReferences>
+          <reference type="build-system">
+            <url>https://github.com/CycloneDX/cyclonedx-python-lib/actions</url>
+          </reference>
+          <reference type="distribution">
+            <url>https://pypi.org/project/cyclonedx-python-lib/</url>
+          </reference>
+          <reference type="documentation">
+            <url>https://cyclonedx.github.io/cyclonedx-python-lib/</url>
+          </reference>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-python-lib/issues</url>
+          </reference>
+          <reference type="license">
+            <url>https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE</url>
+          </reference>
+          <reference type="release-notes">
+            <url>https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md</url>
+          </reference>
+          <reference type="vcs">
+            <url>https://github.com/CycloneDX/cyclonedx-python-lib</url>
+          </reference>
+          <reference type="website">
+            <url>https://cyclonedx.org</url>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+  </metadata>
+  <components>
+    <component bom-ref="e4373c3f-eb2c-4d19-8e78-595a0da330b0" type="library">
+      <name>aiohttp</name>
+      <version>3.8.4</version>
+    </component>
+    <component bom-ref="e04a8404-07bc-4dc8-9692-20df29dbe523" type="library">
+      <name>aiosignal</name>
+      <version>1.3.1</version>
+    </component>
+    <component bom-ref="f9a05ffe-4fca-462a-9186-ca8e4e799963" type="library">
+      <name>async-timeout</name>
+      <version>4.0.2</version>
+    </component>
+    <component bom-ref="41539041-cd9a-47a7-87ac-994afe56cc1a" type="library">
+      <name>asynctest</name>
+      <version>0.13.0</version>
+    </component>
+    <component bom-ref="60bdd8ab-db76-4f2d-a048-f6ea0ea51e63" type="library">
+      <name>attrs</name>
+      <version>22.2.0</version>
+    </component>
+    <component bom-ref="c2b56980-a33a-4dac-b693-7a2395112255" type="library">
+      <name>base58</name>
+      <version>2.1.1</version>
+    </component>
+    <component bom-ref="18630264-7670-4b42-b8ee-4af50a238f89" type="library">
+      <name>bitarray</name>
+      <version>2.7.3</version>
+    </component>
+    <component bom-ref="1e54becb-e745-466d-8e05-1547f9bf5725" type="library">
+      <name>cached-property</name>
+      <version>1.5.2</version>
+    </component>
+    <component bom-ref="c104b489-16f0-4575-b22b-c2b2dade4ebf" type="library">
+      <name>certifi</name>
+      <version>2022.12.7</version>
+    </component>
+    <component bom-ref="2257f89d-5067-41b9-80ae-370c94d23259" type="library">
+      <name>charset-normalizer</name>
+      <version>3.0.1</version>
+    </component>
+    <component bom-ref="ced6d354-0a06-43cc-996b-41367875e1b8" type="library">
+      <name>cytoolz</name>
+      <version>0.12.1</version>
+    </component>
+    <component bom-ref="1478dd69-5141-4a3b-a20a-19e784a18550" type="library">
+      <name>eth-abi</name>
+      <version>3.0.1</version>
+    </component>
+    <component bom-ref="28640ffc-9d28-404d-994b-dad2838f95df" type="library">
+      <name>eth-account</name>
+      <version>0.8.0</version>
+    </component>
+    <component bom-ref="e91e946d-29b0-4b04-bd22-b0ffd45a9d1b" type="library">
+      <name>eth-hash</name>
+      <version>0.5.1</version>
+    </component>
+    <component bom-ref="a270bfdc-a250-481b-b05d-d642125068d2" type="library">
+      <name>eth-keyfile</name>
+      <version>0.6.0</version>
+    </component>
+    <component bom-ref="4a26c2a5-2f04-4017-b41a-8af68c5ab0fb" type="library">
+      <name>eth-keys</name>
+      <version>0.4.0</version>
+    </component>
+    <component bom-ref="db50b5c5-bca1-4011-97a4-d070cd6e9646" type="library">
+      <name>eth-rlp</name>
+      <version>0.3.0</version>
+    </component>
+    <component bom-ref="9022abdb-4038-4e10-b8d2-375704a8bb12" type="library">
+      <name>eth-typing</name>
+      <version>3.2.0</version>
+    </component>
+    <component bom-ref="a4657884-9200-4b9b-9cd7-0eba2420c2ca" type="library">
+      <name>eth-utils</name>
+      <version>2.1.0</version>
+    </component>
+    <component bom-ref="ef8c5a8b-2de1-4af6-bcc5-675018be774a" type="library">
+      <name>frozenlist</name>
+      <version>1.3.3</version>
+    </component>
+    <component bom-ref="0a2ff49d-af79-491b-95ae-32b72dab1a2a" type="library">
+      <name>hexbytes</name>
+      <version>0.3.0</version>
+    </component>
+    <component bom-ref="c22eec4c-3bbe-4a8a-86b7-feef241c430c" type="library">
+      <name>idna</name>
+      <version>3.4</version>
+    </component>
+    <component bom-ref="1214cf8f-5407-414c-bcc9-75694af5b6a2" type="library">
+      <name>importlib-metadata</name>
+      <version>6.0.0</version>
+    </component>
+    <component bom-ref="2a1e45e7-0bd8-4352-bf49-4c9b1bc4d92c" type="library">
+      <name>importlib-resources</name>
+      <version>5.12.0</version>
+    </component>
+    <component bom-ref="5185d63f-dca9-4cb4-ba80-36b060e700e8" type="library">
+      <name>ipfshttpclient</name>
+      <version>0.8.0a2</version>
+    </component>
+    <component bom-ref="c0e24036-c4fd-4afe-ae76-a13a7c501115" type="library">
+      <name>jsonschema</name>
+      <version>4.17.3</version>
+    </component>
+    <component bom-ref="e700d14e-af53-430e-997f-7a8f4ffd501a" type="library">
+      <name>lru-dict</name>
+      <version>1.1.8</version>
+    </component>
+    <component bom-ref="e2abefa6-4e32-4d34-b0a4-80ed36c8014d" type="library">
+      <name>multiaddr</name>
+      <version>0.0.9</version>
+    </component>
+    <component bom-ref="da6d929f-5558-46b5-87c9-9f83525899de" type="library">
+      <name>multidict</name>
+      <version>6.0.4</version>
+    </component>
+    <component bom-ref="6826c73a-6509-4a96-961f-293f06233bba" type="library">
+      <name>netaddr</name>
+      <version>0.8.0</version>
+    </component>
+    <component bom-ref="16ae22ff-4141-4260-afcb-1409169fa8bf" type="library">
+      <name>parsimonious</name>
+      <version>0.8.1</version>
+    </component>
+    <component bom-ref="17fb3ba5-6eb0-4372-857f-787f86cfff06" type="library">
+      <name>pip</name>
+      <version>23.0.1</version>
+    </component>
+    <component bom-ref="5c8aadc1-0abb-4dca-bb19-50c061c5ce1c" type="library">
+      <name>pkgutil-resolve-name</name>
+      <version>1.3.10</version>
+    </component>
+    <component bom-ref="d9f3b6c7-aefa-4a90-bc35-ee948a010037" type="library">
+      <name>protobuf</name>
+      <version>4.22.0</version>
+    </component>
+    <component bom-ref="5341be63-462a-463f-86e9-108f23e52d48" type="library">
+      <name>pycryptodome</name>
+      <version>3.17</version>
+    </component>
+    <component bom-ref="2e43ec17-5beb-472d-9e8a-8bd30e4dbf52" type="library">
+      <name>pyrsistent</name>
+      <version>0.19.3</version>
+    </component>
+    <component bom-ref="5941a594-9a79-42e7-8f16-9ecdea199a0e" type="library">
+      <name>requests</name>
+      <version>2.28.2</version>
+    </component>
+    <component bom-ref="8b146de5-1a95-4879-b68f-cb24aab508a6" type="library">
+      <name>rlp</name>
+      <version>3.0.0</version>
+    </component>
+    <component bom-ref="a4e7372d-5cdf-444a-8ccd-5c598ce4f7a6" type="library">
+      <name>setuptools</name>
+      <version>67.4.0</version>
+    </component>
+    <component bom-ref="9b9e9729-1c12-45b1-9367-e0238f95e94b" type="library">
+      <name>six</name>
+      <version>1.16.0</version>
+    </component>
+    <component bom-ref="3f4c6e32-289a-4da3-b6e3-12f6969dfa61" type="library">
+      <name>sortedcontainers</name>
+      <version>2.4.0</version>
+    </component>
+    <component bom-ref="9c033a72-3f2e-41e3-92c0-f1d29bfb88b7" type="library">
+      <name>toolz</name>
+      <version>0.12.0</version>
+    </component>
+    <component bom-ref="b66a4069-c1e7-4889-bca2-7b3c360da93c" type="library">
+      <name>trie</name>
+      <version>2.1.0</version>
+    </component>
+    <component bom-ref="9d8b7ca1-14e7-4a68-8064-185625755641" type="library">
+      <name>typing-extensions</name>
+      <version>4.5.0</version>
+    </component>
+    <component bom-ref="b90d5464-cfe0-42dd-9b77-e8580d341f8c" type="library">
+      <name>urllib3</name>
+      <version>1.26.14</version>
+    </component>
+    <component bom-ref="28af8cd2-73f9-4c32-935d-304726d2db65" type="library">
+      <name>varint</name>
+      <version>1.0.2</version>
+    </component>
+    <component bom-ref="bd4fb098-698a-484b-bd51-522ad6b798bd" type="library">
+      <name>web3</name>
+      <version>6.0.0b8</version>
+    </component>
+    <component bom-ref="71f13f3c-0ab5-49f3-8429-da260a7b6612" type="library">
+      <name>websockets</name>
+      <version>10.4</version>
+    </component>
+    <component bom-ref="de5c9da2-1d11-4e7f-8332-8bbc19823acb" type="library">
+      <name>wheel</name>
+      <version>0.38.4</version>
+    </component>
+    <component bom-ref="1e109aba-6f68-49d3-85c2-fb0847090ee1" type="library">
+      <name>yarl</name>
+      <version>1.8.2</version>
+    </component>
+    <component bom-ref="281a66ed-449f-45e3-a9dd-45fd3f48920b" type="library">
+      <name>zipp</name>
+      <version>3.14.0</version>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="e4373c3f-eb2c-4d19-8e78-595a0da330b0"/>
+    <dependency ref="e04a8404-07bc-4dc8-9692-20df29dbe523"/>
+    <dependency ref="f9a05ffe-4fca-462a-9186-ca8e4e799963"/>
+    <dependency ref="41539041-cd9a-47a7-87ac-994afe56cc1a"/>
+    <dependency ref="60bdd8ab-db76-4f2d-a048-f6ea0ea51e63"/>
+    <dependency ref="c2b56980-a33a-4dac-b693-7a2395112255"/>
+    <dependency ref="18630264-7670-4b42-b8ee-4af50a238f89"/>
+    <dependency ref="1e54becb-e745-466d-8e05-1547f9bf5725"/>
+    <dependency ref="c104b489-16f0-4575-b22b-c2b2dade4ebf"/>
+    <dependency ref="2257f89d-5067-41b9-80ae-370c94d23259"/>
+    <dependency ref="ced6d354-0a06-43cc-996b-41367875e1b8"/>
+    <dependency ref="1478dd69-5141-4a3b-a20a-19e784a18550"/>
+    <dependency ref="28640ffc-9d28-404d-994b-dad2838f95df"/>
+    <dependency ref="e91e946d-29b0-4b04-bd22-b0ffd45a9d1b"/>
+    <dependency ref="a270bfdc-a250-481b-b05d-d642125068d2"/>
+    <dependency ref="4a26c2a5-2f04-4017-b41a-8af68c5ab0fb"/>
+    <dependency ref="db50b5c5-bca1-4011-97a4-d070cd6e9646"/>
+    <dependency ref="9022abdb-4038-4e10-b8d2-375704a8bb12"/>
+    <dependency ref="a4657884-9200-4b9b-9cd7-0eba2420c2ca"/>
+    <dependency ref="ef8c5a8b-2de1-4af6-bcc5-675018be774a"/>
+    <dependency ref="0a2ff49d-af79-491b-95ae-32b72dab1a2a"/>
+    <dependency ref="c22eec4c-3bbe-4a8a-86b7-feef241c430c"/>
+    <dependency ref="1214cf8f-5407-414c-bcc9-75694af5b6a2"/>
+    <dependency ref="2a1e45e7-0bd8-4352-bf49-4c9b1bc4d92c"/>
+    <dependency ref="5185d63f-dca9-4cb4-ba80-36b060e700e8"/>
+    <dependency ref="c0e24036-c4fd-4afe-ae76-a13a7c501115"/>
+    <dependency ref="e700d14e-af53-430e-997f-7a8f4ffd501a"/>
+    <dependency ref="e2abefa6-4e32-4d34-b0a4-80ed36c8014d"/>
+    <dependency ref="da6d929f-5558-46b5-87c9-9f83525899de"/>
+    <dependency ref="6826c73a-6509-4a96-961f-293f06233bba"/>
+    <dependency ref="16ae22ff-4141-4260-afcb-1409169fa8bf"/>
+    <dependency ref="17fb3ba5-6eb0-4372-857f-787f86cfff06"/>
+    <dependency ref="5c8aadc1-0abb-4dca-bb19-50c061c5ce1c"/>
+    <dependency ref="d9f3b6c7-aefa-4a90-bc35-ee948a010037"/>
+    <dependency ref="5341be63-462a-463f-86e9-108f23e52d48"/>
+    <dependency ref="2e43ec17-5beb-472d-9e8a-8bd30e4dbf52"/>
+    <dependency ref="5941a594-9a79-42e7-8f16-9ecdea199a0e"/>
+    <dependency ref="8b146de5-1a95-4879-b68f-cb24aab508a6"/>
+    <dependency ref="a4e7372d-5cdf-444a-8ccd-5c598ce4f7a6"/>
+    <dependency ref="9b9e9729-1c12-45b1-9367-e0238f95e94b"/>
+    <dependency ref="3f4c6e32-289a-4da3-b6e3-12f6969dfa61"/>
+    <dependency ref="9c033a72-3f2e-41e3-92c0-f1d29bfb88b7"/>
+    <dependency ref="b66a4069-c1e7-4889-bca2-7b3c360da93c"/>
+    <dependency ref="9d8b7ca1-14e7-4a68-8064-185625755641"/>
+    <dependency ref="b90d5464-cfe0-42dd-9b77-e8580d341f8c"/>
+    <dependency ref="28af8cd2-73f9-4c32-935d-304726d2db65"/>
+    <dependency ref="bd4fb098-698a-484b-bd51-522ad6b798bd"/>
+    <dependency ref="71f13f3c-0ab5-49f3-8429-da260a7b6612"/>
+    <dependency ref="de5c9da2-1d11-4e7f-8332-8bbc19823acb"/>
+    <dependency ref="1e109aba-6f68-49d3-85c2-fb0847090ee1"/>
+    <dependency ref="281a66ed-449f-45e3-a9dd-45fd3f48920b"/>
+  </dependencies>
+</bom>
