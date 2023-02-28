@@ -1,0 +1,55 @@
+name: Build and Test
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt
+
+    - name: Lint code
+      run: |
+        pycodestyle --format=pylint rkvst_receipt_scitt unittests
+        python3 -m pylint rkvst_receipt_scitt unittests
+        black rkvst_receipt_scitt unittests
+        modified=$(git status -s | wc -l)
+        if [ $modified -gt 0 ]
+        then
+            echo "there are $modified files that must be reformatted"
+            exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        rm -f coverage.xml
+        rm -rf htmlcov
+        coverage --version
+        coverage run --branch --source rkvst_receipt_scitt -m unittest -v
+        coverage html
+        coverage xml
+        coverage report
+
+    - name: Build distribution package
+      run: python setup.py sdist bdist_wheel
+
+    #- name: Publish package to PyPI
+    #  uses: pypa/gh-action-pypi-publish@v2
+    #  with:
+    #    username: __token__
+    #    password: ${{ secrets.PYPI_API_TOKEN }}
