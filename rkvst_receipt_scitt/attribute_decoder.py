@@ -126,8 +126,8 @@ def decode_attribute_value(hex: str) -> Union[str, list, dict]:
 
     value_type = None
 
-    list_value = list()
-    dict_value = dict()
+    list_value = []
+    dict_value = {}
 
     for index, element in enumerate(decoded_value):
 
