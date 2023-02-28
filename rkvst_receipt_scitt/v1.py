@@ -4,8 +4,7 @@
 
 
 def main():  # pragma: no cover
-    """ main
-    """
+    """main"""
 
     print("not implemented")
 
