@@ -26,11 +26,19 @@ class TestKATAttributeDecoder(TestCase):
     known_attribute_string = "giraffe"
 
     # attribute value: [{'giraffe': 'tall'}, {'elephant': 'big'}]
-    known_encoded_attribute_list = "0xe5866c6973747632cecd87676972616666658474616c6ccecd88656c657068616e7483626967"
+    known_encoded_attribute_list = """0xe5866c6973747632
+                                      cecd876769726166
+                                      66658474616c6cce
+                                      cd88656c65706861
+                                      6e7483626967"""
     known_attribute_list = [{'giraffe': 'tall'}, {'elephant': 'big'}]
 
     # attribute value: {'giraffe': 'tall', 'elephant': 'big'}
-    known_encoded_attribute_dict = "0xe386646963747632cd87676972616666658474616c6ccd88656c657068616e7483626967"
+    known_encoded_attribute_dict = """0xe386646963747632
+                                      cd87676972616666
+                                      658474616c6ccd88
+                                      656c657068616e74
+                                      83626967"""
     known_attribute_dict = {'giraffe': 'tall', 'elephant': 'big'}
 
     def test_attribute_key(self):
