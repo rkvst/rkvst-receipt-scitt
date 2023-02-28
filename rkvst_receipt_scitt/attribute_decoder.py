@@ -5,8 +5,8 @@ from __future__ import (
     annotations
 )
 
-from .exceptions import (
-    InvalidAttributeType
+from enum import (
+    Enum
 )
 
 from rlp.sedes import (
@@ -22,7 +22,9 @@ from rlp import (
 
 )
 
-from enum import Enum
+from .exceptions import (
+    InvalidAttributeType
+)
 
 VALUE_TYPE_LIST = "listv2"
 VALUE_TYPE_DICT = "dictv2"
@@ -36,20 +38,20 @@ class AttributeType(Enum):
     EVENT = 2
 
 
-def _rlp_decode_bytes(hex: str) -> str:
+def _rlp_decode_bytes(hex_str: str) -> str:
     """
     decode an rlp encoded byte array represented as a hexadecimal string
 
     :param hex str: an rlp encoded hexadecimal string, e.g. 0x8767697261666665
     """
-    hex_bytes = bytes.fromhex(hex[2:])
+    hex_bytes = bytes.fromhex(hex_str[2:])
 
     decoded = decode(hex_bytes, binary).decode('utf-8')
 
     return decoded
 
 
-def decode_attribute_value(hex: str) -> str | list | dict:
+def decode_attribute_value(hex_str: str) -> str | list | dict:
     """
     decode an rlp encoded attribute value
 
@@ -106,7 +108,7 @@ def decode_attribute_value(hex: str) -> str | list | dict:
 
     # first see if its a string value
     try:
-        value = _rlp_decode_bytes(hex)
+        value = _rlp_decode_bytes(hex_str)
         return value
     except DeserializationError:
         # if we have a deserialization error here, it means we are not dealing with a string value
@@ -114,7 +116,7 @@ def decode_attribute_value(hex: str) -> str | list | dict:
 
     # if its not a string value it must be a list or a dictionary
 
-    hex_bytes = bytes.fromhex(hex[2:])
+    hex_bytes = bytes.fromhex(hex_str[2:])
 
     listv2_attribute_value = List([List([binary, binary])])
     dictv2_attribute_value = List([binary, binary])
