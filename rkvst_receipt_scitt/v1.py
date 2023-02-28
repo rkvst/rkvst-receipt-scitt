@@ -1,10 +1,8 @@
-
 """ Module for implementation of rkvst scitt receipt verification"""
 
 
 def main():  # pragma: no cover
-    """ main
-    """
+    """main"""
 
     print("not implemented")
 

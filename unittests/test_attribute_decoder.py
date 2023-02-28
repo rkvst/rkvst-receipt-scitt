@@ -7,7 +7,7 @@ from unittest import TestCase
 from rkvst_receipt_scitt.attribute_decoder import (
     decode_attribute_key,
     decode_attribute_value,
-    AttributeType
+    AttributeType,
 )
 
 
@@ -31,7 +31,7 @@ class TestKATAttributeDecoder(TestCase):
                                       66658474616c6cce
                                       cd88656c65706861
                                       6e7483626967"""
-    known_attribute_list = [{'giraffe': 'tall'}, {'elephant': 'big'}]
+    known_attribute_list = [{"giraffe": "tall"}, {"elephant": "big"}]
 
     # attribute value: {'giraffe': 'tall', 'elephant': 'big'}
     known_encoded_attribute_dict = """0xe386646963747632
@@ -39,7 +39,7 @@ class TestKATAttributeDecoder(TestCase):
                                       658474616c6ccd88
                                       656c657068616e74
                                       83626967"""
-    known_attribute_dict = {'giraffe': 'tall', 'elephant': 'big'}
+    known_attribute_dict = {"giraffe": "tall", "elephant": "big"}
 
     def test_attribute_key(self):
         """
@@ -49,11 +49,13 @@ class TestKATAttributeDecoder(TestCase):
 
         attribute_type, attribute_key = decode_attribute_key(self.known_kindname)
 
-        self.assertEqual(self.known_attribute_type, attribute_type,
-            msg="unexpected attribute type")
+        self.assertEqual(
+            self.known_attribute_type, attribute_type, msg="unexpected attribute type"
+        )
 
-        self.assertEqual(self.known_attribute_key, attribute_key,
-            msg="unexpected attribute key")
+        self.assertEqual(
+            self.known_attribute_key, attribute_key, msg="unexpected attribute key"
+        )
 
     def test_attribute_value_string(self):
         """
@@ -63,8 +65,11 @@ class TestKATAttributeDecoder(TestCase):
 
         attribute_value = decode_attribute_value(self.known_encoded_attribute_string)
 
-        self.assertEqual(self.known_attribute_string, attribute_value,
-            msg="unexpected attribute value")
+        self.assertEqual(
+            self.known_attribute_string,
+            attribute_value,
+            msg="unexpected attribute value",
+        )
 
     def test_attribute_value_list(self):
         """
@@ -74,8 +79,9 @@ class TestKATAttributeDecoder(TestCase):
 
         attribute_value = decode_attribute_value(self.known_encoded_attribute_list)
 
-        self.assertEqual(self.known_attribute_list, attribute_value,
-            msg="unexpected attribute value")
+        self.assertEqual(
+            self.known_attribute_list, attribute_value, msg="unexpected attribute value"
+        )
 
     def test_attribute_value_dict(self):
         """
@@ -85,5 +91,6 @@ class TestKATAttributeDecoder(TestCase):
 
         attribute_value = decode_attribute_value(self.known_encoded_attribute_dict)
 
-        self.assertEqual(self.known_attribute_dict, attribute_value,
-            msg="unexpected attribute value")
+        self.assertEqual(
+            self.known_attribute_dict, attribute_value, msg="unexpected attribute value"
+        )

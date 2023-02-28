@@ -1,4 +1,3 @@
-
 """ Module for execptions for rkvst receipt scitt"""
 
 

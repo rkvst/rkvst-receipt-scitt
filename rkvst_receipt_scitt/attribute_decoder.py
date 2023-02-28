@@ -1,30 +1,14 @@
-
 """ Module for decoding on chain attributes into the format returned from the event api"""
 
-from __future__ import (
-    annotations
-)
+from __future__ import annotations
 
-from enum import (
-    Enum
-)
+from enum import Enum
 
-from rlp.sedes import (
-    binary,
-    List
-)
+from rlp.sedes import binary, List
 
-from rlp import (
-    decode,
-    decode_lazy,
-    peek,
-    DeserializationError
+from rlp import decode, decode_lazy, peek, DeserializationError
 
-)
-
-from .exceptions import (
-    InvalidAttributeType
-)
+from .exceptions import InvalidAttributeType
 
 VALUE_TYPE_LIST = "listv2"
 VALUE_TYPE_DICT = "dictv2"
@@ -34,6 +18,7 @@ class AttributeType(Enum):
     """
     Attribute type is the type of attributes supported by rkvst events
     """
+
     ASSET = 1
     EVENT = 2
 
@@ -46,7 +31,7 @@ def _rlp_decode_bytes(hex_str: str) -> str:
     """
     hex_bytes = bytes.fromhex(hex_str[2:])
 
-    decoded = decode(hex_bytes, binary).decode('utf-8')
+    decoded = decode(hex_bytes, binary).decode("utf-8")
 
     return decoded
 
@@ -131,7 +116,6 @@ def decode_attribute_value(hex_str: str) -> str | list | dict:
     dict_value = {}
 
     for index, element in enumerate(decoded_value):
-
         # first index determines which value type we have,
         #   list or dict
         if index == 0:
@@ -142,9 +126,7 @@ def decode_attribute_value(hex_str: str) -> str | list | dict:
         if value_type == VALUE_TYPE_LIST:
             value = peek(element.rlp, index, listv2_attribute_value)
 
-            value_dict = {
-                value[0][0].decode("utf-8"): value[0][1].decode("utf-8")
-            }
+            value_dict = {value[0][0].decode("utf-8"): value[0][1].decode("utf-8")}
 
             list_value.append(value_dict)
             continue
