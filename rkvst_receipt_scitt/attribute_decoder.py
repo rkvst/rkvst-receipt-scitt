@@ -13,16 +13,12 @@ from typing import (
 
 from rlp.sedes import (
     binary,
-    CountableList,
-    List,
-    Binary
+    List
 )
 
 from rlp import (
     decode,
     decode_lazy,
-    encode,
-    Serializable,
     peek,
     DeserializationError
 

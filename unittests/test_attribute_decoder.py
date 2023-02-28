@@ -1,5 +1,5 @@
 """
-Test anchor_events method
+Test attribute decoder functions
 """
 
 from unittest import TestCase
@@ -25,7 +25,6 @@ class TestKATAttributeDecoder(TestCase):
     known_encoded_attribute_string = "0x8767697261666665"
     known_attribute_string = "giraffe"
 
-
     # attribute value: [{'giraffe': 'tall'}, {'elephant': 'big'}]
     known_encoded_attribute_list = "0xe5866c6973747632cecd87676972616666658474616c6ccecd88656c657068616e7483626967"
     known_attribute_list = [{'giraffe': 'tall'}, {'elephant': 'big'}]
@@ -44,7 +43,7 @@ class TestKATAttributeDecoder(TestCase):
 
         self.assertEqual(self.known_attribute_type, attribute_type,
             msg="unexpected attribute type")
-        
+
         self.assertEqual(self.known_attribute_key, attribute_key,
             msg="unexpected attribute key")
 
@@ -80,4 +79,3 @@ class TestKATAttributeDecoder(TestCase):
 
         self.assertEqual(self.known_attribute_dict, attribute_value,
             msg="unexpected attribute value")
-        
