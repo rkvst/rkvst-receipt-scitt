@@ -37,13 +37,17 @@ jobs:
 
     - name: Run tests
       run: |
-        rm -f coverage.xml
-        rm -rf htmlcov
-        coverage --version
-        coverage run --branch --source rkvst_receipt_scitt -m unittest -v
-        coverage html
-        coverage xml
-        coverage report
+
+        python3 -m unittest
+
+        # coverage fails if there are no unit tests
+        # rm -f coverage.xml
+        # rm -rf htmlcov
+        # coverage --version
+        # coverage run --branch --source rkvst_receipt_scitt -m unittest -v
+        # coverage html
+        # coverage xml
+        # coverage report
 
     - name: Build distribution package
       run: python setup.py sdist bdist_wheel
