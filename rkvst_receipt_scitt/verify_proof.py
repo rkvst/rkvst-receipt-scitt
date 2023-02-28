@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 """ Module for verifying all the proofs given in a scitt receipt"""
 

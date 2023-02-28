@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 """ Module for decoding on chain attributes into the format returned from the event api"""
 
@@ -159,8 +158,7 @@ def decode_attribute_value(hex: str) -> Union[str, list, dict]:
     # determine whether we should return a list or dict
     if len(list_value) == 0:
         return dict_value
-    else:
-        return list_value
+    return list_value
 
 
 def decode_attribute_key(kind_name: str) -> Tuple[AttributeType, str]:
