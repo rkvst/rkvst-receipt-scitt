@@ -1,13 +1,12 @@
 
 """ Module for decoding on chain attributes into the format returned from the event api"""
 
-from .exceptions import (
-    InvalidAttributeType
+from __future__ import (
+    annotations
 )
 
-from typing import (
-    Tuple,
-    Union
+from .exceptions import (
+    InvalidAttributeType
 )
 
 from rlp.sedes import (
@@ -50,7 +49,7 @@ def _rlp_decode_bytes(hex: str) -> str:
     return decoded
 
 
-def decode_attribute_value(hex: str) -> Union[str, list, dict]:
+def decode_attribute_value(hex: str) -> str | list | dict:
     """
     decode an rlp encoded attribute value
 
@@ -161,7 +160,7 @@ def decode_attribute_value(hex: str) -> Union[str, list, dict]:
     return list_value
 
 
-def decode_attribute_key(kind_name: str) -> Tuple[AttributeType, str]:
+def decode_attribute_key(kind_name: str) -> tuple[AttributeType, str]:
     """
     decodes the attribute kind<->name pairing into the attribute kind and key
 
