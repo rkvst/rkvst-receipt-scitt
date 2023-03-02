@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """ Module for implementation of rkvst scitt receipt verification"""
 
 
