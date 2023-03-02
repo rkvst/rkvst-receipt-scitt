@@ -46,7 +46,7 @@ jobs:
         coverage run --branch --source rkvst_receipt_scitt -m unittest -v
         coverage html
         coverage xml
-        coverage report
+        coverage report --fail-under=85
 
     - name: Build distribution package
       run: |
