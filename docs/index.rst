@@ -7,8 +7,10 @@
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 5
    :caption: Contents:
+
+   package
 
 Indices and tables
 ==================

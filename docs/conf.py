@@ -36,6 +36,7 @@ extensions = [
     "sphinxcontrib.spelling",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosectionlabel",
+    "sphinx.ext.autosummary",
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
     "sphinx.ext.todo",
